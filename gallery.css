@@ -1,0 +1,43 @@
+/* gallery */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    max-width: 1020px;
+    margin: 4em auto;
+}
+
+figure {
+    display: grid;
+    grid-template-rows: repeat(1, auto);
+    align-content: flex-end;
+    align-items: flex-end;
+    padding: 20px;
+}
+
+figure img {
+    grid-row: 1/2;
+    grid-column: 1/-1;
+
+}
+
+figure figcaption {
+    grid-row: 1/2;
+    grid-column: 1/-1;
+    order: 1;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    font-weight: 400;
+    display: none;
+}
+
+figure:hover figcaption {
+    display: unset;
+}
+
+@media (max-width: 1024px) {
+
+    figure figcaption {
+        display: unset;
+    }
+}
